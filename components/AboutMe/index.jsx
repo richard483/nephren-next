@@ -1,6 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { SuperWrapper } from "./style";
+import {
+  AesBox,
+  ContentWrapper,
+  SuperWrapper,
+  TitleWrapper,
+  Wrapper,
+} from "./style";
 
 var data = JSON.stringify({
   collection: "AboutMe",
@@ -42,9 +48,12 @@ const AboutMe = () => {
 
   return (
     <>
-      <h2>About Me</h2>
       <SuperWrapper>
-        <div>{aboutMeData}</div>
+        <AesBox />
+        <Wrapper>
+          <TitleWrapper>About Me</TitleWrapper>
+          <ContentWrapper>{aboutMeData}</ContentWrapper>
+        </Wrapper>
       </SuperWrapper>
     </>
   );
