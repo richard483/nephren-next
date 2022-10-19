@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled from "styled-components";
 import { COLORS } from "../../constants/style";
 
@@ -49,48 +50,3 @@ export const CreditWrapper = styled.div`
   color: ${COLORS.lightGray};
   text-align: center;
 `;
-
-// export const Card = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   border-radius: 24px !important;
-//   padding: 24px 24px;
-//   background-color: ${white};
-
-//   @media only screen and (max-width: 480px) {
-//     box-shadow: none;
-//     border: none;
-//     padding: 0;
-//   }
-// `;
-
-// export const Icon = styled.img`
-//   width: 16px;
-//   align-self: flex-start;
-//   &:hover {
-//     cursor: pointer;
-//   }
-// `;
-
-// export const Button = styled.button`
-//   cursor: pointer;
-//   margin-top: ${spacingXxl2};
-//   width: 100%;
-//   background-color: ${blue};
-//   color: ${white};
-//   padding: 15px 20px;
-//   border-radius: 6px;
-//   outline: none;
-//   border: none;
-//   font-family: "Montserrat";
-
-//   &:hover {
-//     background-color: #5a688b;
-//   }
-
-//   &:active {
-//     background-color: #253254;
-//   }
-// `;
-
