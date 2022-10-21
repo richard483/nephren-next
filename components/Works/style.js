@@ -4,19 +4,21 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export const SuperWrapper = styled.div`
   overflow: hidden;
-  background-color: ${COLORS.jet};
-  position: relative;
-`;
-
-export const Wrapper = styled.div`
   white-space: pre-wrap;
-  /* height: 50vh; */
+  height: 50vh;
   padding: 5rem 6rem 10rem;
   background-color: ${COLORS.lightGray};
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   z-index: 0;
+`;
+
+export const Wrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 `;
 
 export const TitleWrapper = styled.h2`
@@ -35,20 +37,25 @@ export const CarouselWrapper = styled.div`
   align-items: center;
 
   img {
-    /* position: absolute;
+    position: absolute;
     left: 0;
     right: 0;
     margin-left: auto;
-    margin-right: auto; */
-    max-width: 30vw;
+    margin-right: auto;
+    height: 30vh;
   }
 `;
 
-export const PagingWrapper = styled.div`
-  width: 300vw;
-  display: flex;
-  justify-content: center;
-  justify-content: space-between;
-`;
+export const AesBoxWrapper = styled.div`
+  position: absolute;
+  right: 0;
+  width: 16rem;
 
-//
+  ${(props) =>
+    props.pos == "left"
+      ? `
+    left: 0;
+    bottom: 16rem;`
+      : `
+    right: 0;`}
+`;

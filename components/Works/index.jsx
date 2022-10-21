@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
+  AesBoxWrapper,
   CarouselWrapper,
-  PagingWrapper,
   SuperWrapper,
   TitleWrapper,
   Wrapper,
@@ -9,11 +9,13 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import { images } from "./image-data";
+import Image from "next/image";
 
 const variants = {
   enter: (direction) => {
     return {
-      x: direction > 0 ? 1000 : -1000,
+      zIndex: 0,
+      x: direction > 0 ? 150 : -150,
       opacity: 0,
     };
   },
@@ -25,18 +27,25 @@ const variants = {
   exit: (direction) => {
     return {
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
+      x: direction < 0 ? 150 : -150,
       opacity: 0,
     };
   },
 };
 
-const swipeConfidenceThreshold = 10000;
+const swipeConfidenceThreshold = 1000;
 const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity;
 };
 
 const AboutMe = () => {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      paginate(1);
+    }, 5000);
+    return () => clearInterval(interval);
+  });
+
   const [[page, direction], setPage] = useState([0, 0]);
 
   const imageIndex = wrap(0, images.length, page);
@@ -48,10 +57,26 @@ const AboutMe = () => {
   return (
     <>
       <SuperWrapper>
+        <TitleWrapper>My Works</TitleWrapper>
+        <AesBoxWrapper pos="right">
+          <Image
+            src="/images/aesBorder.svg"
+            alt="aes-box"
+            width={500}
+            height={500}
+          />
+        </AesBoxWrapper>
+        <AesBoxWrapper pos="left">
+          <Image
+            src="/images/aesBorder.svg"
+            alt="aes-box"
+            width={500}
+            height={500}
+          />
+        </AesBoxWrapper>
         <Wrapper>
-          <TitleWrapper>My Works</TitleWrapper>
           <CarouselWrapper>
-            <div>Prev</div>
+            <div onClick={() => paginate(-1)}>Prev</div>
             <AnimatePresence initial={false} custom={direction}>
               <motion.img
                 key={page}
@@ -79,15 +104,7 @@ const AboutMe = () => {
                 }}
               />
             </AnimatePresence>
-            <div>Next</div>
-            {/* <PagingWrapper>
-              <div className="next" onClick={() => paginate(1)}>
-                {"‣"}
-              </div>
-              <div className="prev" onClick={() => paginate(-1)}>
-                {"‣"}
-              </div>
-            </PagingWrapper> */}
+            <div onClick={() => paginate(1)}>Next</div>
           </CarouselWrapper>
         </Wrapper>
       </SuperWrapper>
