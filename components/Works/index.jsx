@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import {
   AesBoxWrapper,
   CarouselWrapper,
+  NavigationWrapper,
   SuperWrapper,
   TitleWrapper,
   Wrapper,
@@ -76,7 +77,9 @@ const AboutMe = () => {
         </AesBoxWrapper>
         <Wrapper>
           <CarouselWrapper>
-            <div onClick={() => paginate(-1)}>Prev</div>
+            <NavigationWrapper onClick={() => paginate(-1)}>
+              PREV
+            </NavigationWrapper>
             <AnimatePresence initial={false} custom={direction}>
               <motion.img
                 key={page}
@@ -104,7 +107,9 @@ const AboutMe = () => {
                 }}
               />
             </AnimatePresence>
-            <div onClick={() => paginate(1)}>Next</div>
+            <NavigationWrapper onClick={() => paginate(1)}>
+              NEXT
+            </NavigationWrapper>
           </CarouselWrapper>
         </Wrapper>
       </SuperWrapper>

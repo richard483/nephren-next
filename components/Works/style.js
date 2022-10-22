@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export const SuperWrapper = styled.div`
   overflow: hidden;
   white-space: pre-wrap;
-  height: 50vh;
+  height: 60vh;
   padding: 5rem 6rem 10rem;
   background-color: ${COLORS.lightGray};
   display: flex;
@@ -28,7 +28,7 @@ export const TitleWrapper = styled.h2`
 `;
 
 export const CarouselWrapper = styled.div`
-  width: 100%;
+  width: 90%;
   padding: 0;
   margin: 0;
   display: flex;
@@ -42,20 +42,28 @@ export const CarouselWrapper = styled.div`
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    height: 30vh;
+    height: 50vh;
   }
 `;
 
 export const AesBoxWrapper = styled.div`
   position: absolute;
   right: 0;
-  width: 16rem;
+  width: 13rem;
 
   ${(props) =>
     props.pos == "left"
       ? `
     left: 0;
-    bottom: 16rem;`
+    bottom: 13rem;`
       : `
     right: 0;`}
+`;
+
+export const NavigationWrapper = styled.div`
+  margin-bottom: 5rem;
+  border-bottom: 0.3rem solid ${COLORS.silver};
+  padding: 0 0.5rem; 
+  font-size: 1.5rem;
+  cursor: pointer;
 `;
