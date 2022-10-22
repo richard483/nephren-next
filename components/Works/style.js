@@ -55,7 +55,7 @@ export const AesBoxWrapper = styled.div`
     props.pos == "left"
       ? `
     left: 0;
-    bottom: 13rem;`
+    bottom: 5rem;`
       : `
     right: 0;`}
 `;
