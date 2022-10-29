@@ -39,7 +39,7 @@ const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity;
 };
 
-const AboutMe = () => {
+const Works = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       paginate(1);
@@ -56,7 +56,7 @@ const AboutMe = () => {
   };
 
   return (
-    <>
+    <div id="myWorks">
       <SuperWrapper>
         <TitleWrapper>My Works</TitleWrapper>
         <AesBoxWrapper pos="right">
@@ -113,8 +113,8 @@ const AboutMe = () => {
           </CarouselWrapper>
         </Wrapper>
       </SuperWrapper>
-    </>
+    </div>
   );
 };
 
-export default AboutMe;
+export default Works;

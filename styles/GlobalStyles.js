@@ -7,6 +7,7 @@ html{
   -ms-overflow-style: none;  /* IE and Edge */
   overflow: -moz-scrollbars-none; /* Firefox */
   ::-webkit-scrollbar { width: 0 !important } /* Chrome, Safari, Opera*/
+  scroll-behavior: smooth;
 }
 h1 {
   color:${COLORS.lightGray};
@@ -32,6 +33,14 @@ h3{
 body{
   margin: 0;
   padding: 0;
+}
+a{
+  text-decoration: none;
+  color: ${COLORS.silver}; 
+}
+a:visited{
+  text-decoration: none;
+  color: ${COLORS.silver}; 
 }
 `;
 

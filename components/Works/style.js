@@ -12,6 +12,7 @@ export const SuperWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   z-index: 0;
+  position: relative;
 `;
 
 export const Wrapper = styled.div`
@@ -49,15 +50,15 @@ export const CarouselWrapper = styled.div`
 export const AesBoxWrapper = styled.div`
   position: absolute;
   right: 0;
-  width: 13rem;
+  width: 12rem;
 
   ${(props) =>
     props.pos == "left"
       ? `
-    left: 0;
+    left: -2.5%;
     bottom: 5rem;`
       : `
-    right: 0;`}
+    right: -2.5%;`}
 `;
 
 export const NavigationWrapper = styled.div`

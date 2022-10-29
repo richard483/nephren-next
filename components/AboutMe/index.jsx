@@ -47,7 +47,7 @@ const AboutMe = () => {
   }
 
   return (
-    <>
+    <div id="aboutMe">
       <SuperWrapper>
         <AesBox />
         <Wrapper>
@@ -55,7 +55,7 @@ const AboutMe = () => {
           <ContentWrapper>{aboutMeData}</ContentWrapper>
         </Wrapper>
       </SuperWrapper>
-    </>
+    </div>
   );
 };
 
