@@ -49,7 +49,6 @@ export const CarouselWrapper = styled.div`
 
 export const AesBoxWrapper = styled.div`
   position: absolute;
-  right: 0;
   width: 12rem;
 
   ${(props) =>
@@ -64,7 +63,7 @@ export const AesBoxWrapper = styled.div`
 export const NavigationWrapper = styled.div`
   margin-bottom: 5rem;
   border-bottom: 0.3rem solid ${COLORS.silver};
-  padding: 0 0.5rem; 
+  padding: 0 0.5rem;
   font-size: 1.5rem;
   cursor: pointer;
 `;

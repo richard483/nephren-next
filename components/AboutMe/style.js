@@ -13,7 +13,6 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  z-index: 0;
 `;
 
 export const TitleWrapper = styled.h2`
@@ -31,7 +30,6 @@ export const ContentWrapper = styled.div`
   line-height: 29px;
   text-align: center;
   justify-content: center;
-  z-index: 0;
 
   @media (max-width: 768px) {
     padding: 0;

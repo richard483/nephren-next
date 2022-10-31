@@ -5,6 +5,7 @@ import {
   NavigationWrapper,
   SuperWrapper,
   TitleWrapper,
+  TrAesBox,
   Wrapper,
 } from "./style";
 import { motion, AnimatePresence } from "framer-motion";

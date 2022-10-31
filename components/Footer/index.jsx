@@ -11,7 +11,7 @@ import {
 import Image from "next/image";
 
 const Footer = () => (
-  <>
+  <div id="footer">
     <SuperWrapper>
       <Wrapper>
         <ContentWrapper>
@@ -78,7 +78,7 @@ const Footer = () => (
       </Wrapper>
       <CreditWrapper>© nephren 2022</CreditWrapper>
     </SuperWrapper>
-  </>
+  </div>
 );
 
 export default Footer;
