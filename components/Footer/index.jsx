@@ -8,15 +8,10 @@ import {
   SuperWrapper,
   CreditWrapper,
 } from "./style";
-import github from "../../constants/images/github.svg";
-import instagram from "../../constants/images/instagram.svg";
-import linkedin from "../../constants/images/linkedin.svg";
-import netlify from "../../constants/images/netlify.svg";
-import next from "../../constants/images/next.svg";
 import Image from "next/image";
 
 const Footer = () => (
-  <>
+  <div id="footer">
     <SuperWrapper>
       <Wrapper>
         <ContentWrapper>
@@ -25,17 +20,32 @@ const Footer = () => (
           <IconWrapper>
             <a href="https://github.com/richard483">
               <ImageWrapper>
-                <Image src={github} alt="github" />
+                <Image
+                  src="/images/github.svg"
+                  alt="github"
+                  width={500}
+                  height={500}
+                />
               </ImageWrapper>
             </a>
             <a href="https://www.instagram.com/richard__uwu/">
               <ImageWrapper>
-                <Image src={instagram} alt="instagram" />
+                <Image
+                  src="/images/instagram.svg"
+                  alt="instagram"
+                  width={500}
+                  height={500}
+                />
               </ImageWrapper>
             </a>
             <a href="https://www.linkedin.com/in/richard-william-9590161b7/">
               <ImageWrapper>
-                <Image src={linkedin} alt="linkedin" />
+                <Image
+                  src="/images/linkedin.svg"
+                  alt="linkedin"
+                  width={500}
+                  height={500}
+                />
               </ImageWrapper>
             </a>
           </IconWrapper>
@@ -45,12 +55,22 @@ const Footer = () => (
           <IconWrapper>
             <a href="https://www.netlify.com/">
               <ImageWrapper>
-                <Image src={netlify} alt="netlify" />
+                <Image
+                  src="/images/netlify.svg"
+                  alt="netlify"
+                  width={500}
+                  height={500}
+                />
               </ImageWrapper>
             </a>
             <a href="https://nextjs.org/">
               <ImageWrapper>
-                <Image src={next} alt="next" />
+                <Image
+                  src="/images/next.svg"
+                  alt="next"
+                  width={500}
+                  height={500}
+                />
               </ImageWrapper>
             </a>
           </IconWrapper>
@@ -58,7 +78,7 @@ const Footer = () => (
       </Wrapper>
       <CreditWrapper>© nephren 2022</CreditWrapper>
     </SuperWrapper>
-  </>
+  </div>
 );
 
 export default Footer;
