@@ -53,10 +53,10 @@ const Footer = () => (
         <ContentWrapper>
           <TextWrapper>This website built using:</TextWrapper>
           <IconWrapper>
-            <a href="https://www.netlify.com/">
+            <a href="https://vercel.com/">
               <ImageWrapper>
                 <Image
-                  src="/images/netlify.svg"
+                  src="/images/vercel-icon-light.svg"
                   alt="netlify"
                   width={500}
                   height={500}
